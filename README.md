@@ -1,19 +1,18 @@
-# Investeu1
+# immo17.at Clone
 
-Static website template for launch-ready finance or investor content. Includes a responsive landing page, simple navigation, and a polished visual style.
+Static website clone modeled after the immo17.at landing page. Includes a hero search section, property offer cards, new build locations, Croatia listings, and footer contact details.
 
 ## Local development
 
-Open the `investeu1` folder in your editor and preview `index.html`.
+Open the `investeu1` folder and preview `index.html` in your browser.
 
 ## GitHub Pages deployment
 
-1. Create a GitHub repository named `investeu1`.
-2. Push the local repository to GitHub.
-3. In repository settings, enable GitHub Pages from the `main` branch.
+1. Push the local repository to GitHub.
+2. Enable GitHub Pages in the repository settings using the `master` branch.
 
 ## Next steps
 
-- Update the page copy and branding.
-- Add new pages or sections as needed.
-- Add a backend later if you want dynamic data or user login.
+- Replace placeholder images with your own property imagery.
+- Add real search functionality or backend integration.
+- Extend the site with detail pages and property listings.
