@@ -18,6 +18,17 @@ Open the `investeu1` folder and preview `index.html` in your browser.
 3. Set the build command to blank and the publish directory to `.`.
 4. Netlify will use `netlify.toml` for configuration and deploy the static site.
 
+### Automatic deploy via GitHub Actions
+
+This repository includes a GitHub Actions workflow that deploys to Netlify on every push to `master`.
+
+Add the following GitHub repository secrets before the workflow will work:
+
+- `NETLIFY_AUTH_TOKEN`: your Netlify personal access token (create one in Netlify user settings).
+- `NETLIFY_SITE_ID`: the Netlify site ID for your site (found in Site settings > General > Site details).
+
+Once the secrets are set, pushes to `master` will trigger an automatic deploy using the `netlify-cli`.
+
 ## Next steps
 
 - Replace placeholder images with your own property imagery.
