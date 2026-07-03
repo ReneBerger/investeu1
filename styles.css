@@ -482,3 +482,61 @@ select {
     display: inline-flex;
   }
 }
+
+.standard-section {
+  padding: 3rem 0;
+}
+
+.standard-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.standard-card h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.standard-card p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 48rem;
+}
+
+.standard-badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(255, 168, 0, 0.45);
+  border-radius: 999px;
+  color: var(--highlight);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.35rem 0.65rem;
+  white-space: nowrap;
+}
+
+.standard-note {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 1rem;
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .standard-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.data-status {
+  color: var(--muted);
+  flex-basis: 100%;
+  font-size: 0.95rem;
+}

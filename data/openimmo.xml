@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openimmo>
+  <anbieter>
+    <immobilie>
+      <objektkategorie>
+        <nutzungsart WOHNEN="true" />
+        <vermarktungsart KAUF="true" />
+        <objektart><wohnung WOHNUNGTYP="PENTHOUSE" /></objektart>
+      </objektkategorie>
+      <geo><plz>1010</plz><ort>Wien</ort><land iso_land="AUT">Österreich</land></geo>
+      <preise><kaufpreis>8200000</kaufpreis></preise>
+      <flaechen><wohnflaeche>260</wohnflaeche><anzahl_zimmer>5</anzahl_zimmer></flaechen>
+      <ausstattung><balkon_terrasse>true</balkon_terrasse><stellplatzart GARAGE="true" /></ausstattung>
+      <freitexte>
+        <objekttitel>Penthouse City</objekttitel>
+        <objektbeschreibung>Penthouse mit Dachterrasse, privatem Lift und einzigartigem Blick über die Stadt.</objektbeschreibung>
+      </freitexte>
+      <verwaltung_techn><objekt_nr_extern>INV-1001</objekt_nr_extern></verwaltung_techn>
+    </immobilie>
+    <immobilie>
+      <objektkategorie>
+        <nutzungsart WOHNEN="true" />
+        <vermarktungsart KAUF="true" />
+        <objektart><haus HAUSTYP="VILLA" /></objektart>
+      </objektkategorie>
+      <geo><plz>52440</plz><ort>Poreč</ort><land iso_land="HRV">Kroatien</land></geo>
+      <preise><kaufpreis>10800000</kaufpreis></preise>
+      <flaechen><wohnflaeche>410</wohnflaeche><anzahl_zimmer>6</anzahl_zimmer></flaechen>
+      <ausstattung><swimmingpool>true</swimmingpool><balkon_terrasse>true</balkon_terrasse></ausstattung>
+      <freitexte>
+        <objekttitel>Adriavilla in Poreč</objekttitel>
+        <objektbeschreibung>Direkt am Wasser gelegene Luxusvilla mit modernster Technik und privatem Bootsanleger.</objektbeschreibung>
+      </freitexte>
+      <verwaltung_techn><objekt_nr_extern>INV-1002</objekt_nr_extern></verwaltung_techn>
+    </immobilie>
+  </anbieter>
+</openimmo>
