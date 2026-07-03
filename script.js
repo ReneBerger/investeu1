@@ -1,18 +1,31 @@
-const navLinks = document.querySelectorAll('.main-menu a');
+const mobileMenu = document.querySelector('#mobileMenu');
 const menuToggle = document.querySelector('.menu-toggle');
-const mainMenu = document.querySelector('.main-menu');
+const mobileLinks = document.querySelectorAll('.mobile-nav a');
+const desktopLinks = document.querySelectorAll('.main-menu a');
 
-navLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      event.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth' });
-      mainMenu.classList.remove('open');
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+}
+
+function attachScrollBehavior(links) {
+  links.forEach((link) => {
+    const href = link.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      link.addEventListener('click', (event) => {
+        const target = document.querySelector(href);
+        if (target) {
+          event.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+          closeMobileMenu();
+        }
+      });
     }
   });
-});
+}
+
+attachScrollBehavior(desktopLinks);
+attachScrollBehavior(mobileLinks);
 
 menuToggle.addEventListener('click', () => {
-  mainMenu.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
 });

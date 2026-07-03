@@ -8,17 +8,33 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="main-header">
-      <div class="header-inner container">
-        <a class="logo" href="#home">immo17</a>
-        <button class="menu-toggle" aria-label="Menü öffnen">☰</button>
-        <nav class="main-menu">
-          <a href="#home">Startseite</a>
-          <a href="#search">Suchen</a>
-          <a href="#angebote">Angebot</a>
-          <a href="#standorte">Standorte</a>
-          <a href="#kontakt">Kontakt</a>
-        </nav>
+    <header class="main-header fixed-header">
+      <div class="header-lower">
+        <div class="header-inner container">
+          <div class="inner-header-left">
+            <a class="logo" href="#home">immo17</a>
+            <nav class="main-menu">
+              <a href="#home">Startseite</a>
+              <a href="#kategorien">Immobilien</a>
+              <a href="#karte">Karte</a>
+            </nav>
+          </div>
+          <div class="inner-header-right">
+            <a class="btn btn-secondary" href="#portal">Das Portal sucht für Sie</a>
+            <button class="menu-toggle" aria-label="Menü öffnen">☰</button>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+          <a class="mobile-logo" href="#home">immo17</a>
+          <nav class="mobile-nav">
+            <a href="#home">Startseite</a>
+            <a href="#kategorien">Immobilien</a>
+            <a href="#karte">Karte</a>
+            <a class="btn btn-secondary mobile-cta" href="#portal">Das Portal sucht für Sie</a>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -29,41 +45,29 @@
             <span class="eyebrow">Immobilien Österreich</span>
             <h1>Es ist ganz einfach, auf suchen klicken.</h1>
             <p>Finden Sie Ihre Traumimmobilie in Österreich und Kroatien mit exklusiven Angeboten zu Luxusimmobilien, Neubauprojekten und erstklassigen Standorten.</p>
-            <a class="btn btn-primary" href="#search">Jetzt suchen</a>
+            <a class="btn btn-primary" href="#kategorien">Jetzt suchen</a>
           </div>
-          <div class="hero-image">
-            <div class="hero-panel">
-              <h2>Ihre Suche starten</h2>
-              <form id="search" class="search-form">
-                <label>
-                  Region
-                  <select>
-                    <option>Wien</option>
-                    <option>Graz</option>
-                    <option>Linz</option>
-                    <option>Salzburg</option>
-                  </select>
-                </label>
-                <label>
-                  Kategorie
-                  <select>
-                    <option>Wohnung</option>
-                    <option>Haus</option>
-                    <option>Neubau</option>
-                    <option>Kroatien</option>
-                  </select>
-                </label>
-                <label>
-                  Preis
-                  <select>
-                    <option>Bis 1 Mio.</option>
-                    <option>1–3 Mio.</option>
-                    <option>3–5 Mio.</option>
-                    <option>5+ Mio.</option>
-                  </select>
-                </label>
-                <button class="btn btn-secondary" type="submit">Suche starten</button>
-              </form>
+          <div class="hero-panel">
+            <div class="hero-panel-inner">
+              <h2>Suchen Sie nach</h2>
+              <div class="category-grid">
+                <article class="category-card">
+                  <div class="category-icon">🏢</div>
+                  <h3>Neubau</h3>
+                </article>
+                <article class="category-card">
+                  <div class="category-icon">🏡</div>
+                  <h3>Häuser mit Pool</h3>
+                </article>
+                <article class="category-card">
+                  <div class="category-icon">🌟</div>
+                  <h3>Luxusimmobilien</h3>
+                </article>
+                <article class="category-card">
+                  <div class="category-icon">🏬</div>
+                  <h3>Geschäftsräume</h3>
+                </article>
+              </div>
             </div>
           </div>
         </div>
@@ -72,26 +76,17 @@
       <section id="angebote" class="section section-dark">
         <div class="container">
           <div class="section-heading text-center">
-            <span class="subtitle">Angebot der exklusivsten Immobilien in Österreich</span>
-            <h2>Entdecken Sie, was unsere Immobilienexpertise auszeichnet</h2>
+            <span class="subtitle">Die teuersten Immobilien</span>
+            <h2>Angebot der exklusivsten Immobilien in Österreich</h2>
           </div>
           <div class="card-grid">
             <article class="property-card">
               <div class="property-image image-austria"></div>
               <div class="property-content">
-                <p class="property-tag">Wien</p>
-                <h3>Luxuriöse Stadtwohnungen</h3>
-                <p>Exklusive Wohnungen in Toplagen mit hoher Rendite und bester Anbindung.</p>
-                <span class="price">ab 2,5 Mio.</span>
-              </div>
-            </article>
-            <article class="property-card">
-              <div class="property-image image-house"></div>
-              <div class="property-content">
-                <p class="property-tag">Neubau</p>
-                <h3>Moderne Neubauprojekte</h3>
-                <p>Nachhaltige Neubauten in Graz, Linz und Salzburg für komfortables Wohnen.</p>
-                <span class="price">ab 1,8 Mio.</span>
+                <p class="property-tag">Zur Miete</p>
+                <h3>Graz</h3>
+                <p>Top-Luxuswohnung in bester Lage mit exklusivem Design und modernster Ausstattung.</p>
+                <span class="price">5 Mio. - 10 Mio.</span>
               </div>
             </article>
             <article class="property-card">
@@ -99,15 +94,24 @@
               <div class="property-content">
                 <p class="property-tag">Kroatien</p>
                 <h3>Erste Reihe am Meer</h3>
-                <p>Exklusive Villen und Ferienimmobilien direkt an der Adriaküste.</p>
-                <span class="price">ab 3,5 Mio.</span>
+                <p>Exklusive Villen und Häuser an der kroatischen Adriaküste mit direktem Meerzugang.</p>
+                <span class="price">10 Mio. - 20 Mio.</span>
+              </div>
+            </article>
+            <article class="property-card">
+              <div class="property-image image-house"></div>
+              <div class="property-content">
+                <p class="property-tag">Kroatien</p>
+                <h3>Poreč</h3>
+                <p>Luxuriöse Wohnungen und Apartments mit Pool und Meerblick.</p>
+                <span class="price">3 Mio. - 5 Mio.</span>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="standorte" class="section section-light">
+      <section id="kategorien" class="section section-light">
         <div class="container">
           <div class="section-heading text-center">
             <span class="subtitle">Immobilien</span>
@@ -127,7 +131,7 @@
               <h4>Linz</h4>
             </div>
             <div class="location-card">
-              <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" alt="Salzburg" />
+              <img src="https://images.unsplash.com/photo-1531764242653-0b05b8d8acdd?auto=format&fit=crop&w=800&q=80" alt="Salzburg" />
               <h4>Salzburg</h4>
             </div>
           </div>
@@ -142,21 +146,21 @@
           </div>
           <div class="blog-grid">
             <article class="blog-card">
-              <div class="blog-image"></div>
+              <div class="blog-image image-croatia-1"></div>
               <div class="blog-body">
                 <h3>Reihe zum Meer</h3>
                 <p>Exklusives Angebot an Immobilien direkt an der Küste mit unvergleichlichem Meerblick.</p>
               </div>
             </article>
             <article class="blog-card">
-              <div class="blog-image"></div>
+              <div class="blog-image image-croatia-2"></div>
               <div class="blog-body">
                 <h3>Luxusimmobilien</h3>
                 <p>Prestigevillen, Apartments und Häuser von höchster Qualität für anspruchsvolle Käufer.</p>
               </div>
             </article>
             <article class="blog-card">
-              <div class="blog-image"></div>
+              <div class="blog-image image-croatia-3"></div>
               <div class="blog-body">
                 <h3>Angebot an Häusern in Istrien</h3>
                 <p>Wunderschöne Häuser in Istrien von traditionellen Steinvillen bis zu modernen Ferienhäusern.</p>
