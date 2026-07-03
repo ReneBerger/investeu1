@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>immo17.at</title>
-    <meta name="description" content="Immobilien Österreich" />
+    <meta name="description" content="Immobilien Österreich mit OpenImmo-kompatiblen Immobiliendaten" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -20,7 +20,7 @@
             </nav>
           </div>
           <div class="inner-header-right">
-            <a class="btn btn-secondary" href="#portal">Das Portal sucht für Sie</a>
+            <a class="btn btn-secondary" href="#datenstandard">OpenImmo Standard</a>
             <button class="menu-toggle" aria-label="Menü öffnen">☰</button>
           </div>
         </div>
@@ -32,7 +32,7 @@
             <a href="#home">Startseite</a>
             <a href="#angebote">Immobilien</a>
             <a href="#karte">Karte</a>
-            <a class="btn btn-secondary mobile-cta" href="#portal">Das Portal sucht für Sie</a>
+            <a class="btn btn-secondary mobile-cta" href="#datenstandard">OpenImmo Standard</a>
           </nav>
         </div>
       </div>
@@ -109,7 +109,8 @@
             <h2>Gefundene Immobilien</h2>
           </div>
           <div class="filter-summary">
-            <p id="resultCount">8 Angebote verfügbar</p>
+            <p id="resultCount">Angebote werden geladen …</p>
+            <p id="dataStatus" class="data-status">OpenImmo XML wird vorbereitet.</p>
             <button id="clearFilters" class="btn btn-secondary">Filter zurücksetzen</button>
           </div>
           <div id="propertyCards" class="card-grid"></div>
@@ -117,6 +118,18 @@
             <h3>Immobiliendetails</h3>
             <p>Wählen Sie ein Angebot aus, um alle Details anzuzeigen.</p>
           </div>
+        </div>
+      </section>
+
+
+      <section id="datenstandard" class="section section-light standard-section">
+        <div class="container standard-card">
+          <div>
+            <span class="subtitle">Datenstandard</span>
+            <h2>Dynamische Immobilien aus OpenImmo XML</h2>
+            <p>Die Website lädt die regelmäßig aktualisierte XML-Datei aus Immoz, ersetzt dadurch automatisch gelöschte Objekte und bereitet Texte vor der Anzeige über definierte Transformationsregeln auf.</p>
+          </div>
+          <a class="btn btn-secondary" href="https://www.openimmo.de/go.php/p/24/download.htm" target="_blank" rel="noopener">OpenImmo Standard</a>
         </div>
       </section>
 
@@ -177,6 +190,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
