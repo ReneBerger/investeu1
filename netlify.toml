@@ -3,6 +3,21 @@
   command = ""
 
 [[redirects]]
+  from = "/DE/Immobiliendetailseite/*"
+  to = "/detail.html"
+  status = 200
+
+[[redirects]]
+  from = "/DE/Immobiliendetailseite"
+  to = "/detail.html"
+  status = 200
+
+[[redirects]]
+  from = "/DE/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

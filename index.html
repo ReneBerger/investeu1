@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>immo17.at</title>
-    <meta name="description" content="Immobilien Österreich" />
+    <meta name="description" content="Immobilien Österreich mit dynamischen Daten aus Supabase" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -20,7 +20,7 @@
             </nav>
           </div>
           <div class="inner-header-right">
-            <a class="btn btn-secondary" href="#portal">Das Portal sucht für Sie</a>
+            <a class="btn btn-secondary" href="#datenstandard">Datenquelle</a>
             <button class="menu-toggle" aria-label="Menü öffnen">☰</button>
           </div>
         </div>
@@ -32,7 +32,7 @@
             <a href="#home">Startseite</a>
             <a href="#angebote">Immobilien</a>
             <a href="#karte">Karte</a>
-            <a class="btn btn-secondary mobile-cta" href="#portal">Das Portal sucht für Sie</a>
+            <a class="btn btn-secondary mobile-cta" href="#datenstandard">Datenquelle</a>
           </nav>
         </div>
       </div>
@@ -106,17 +106,26 @@
         <div class="container">
           <div class="section-heading text-center">
             <span class="subtitle">Die exklusivsten Immobilien</span>
-            <h2>Gefundene Immobilien</h2>
+            <h2>Listenansicht aller Immobilien</h2>
           </div>
           <div class="filter-summary">
-            <p id="resultCount">8 Angebote verfügbar</p>
+            <p id="resultCount">Angebote werden geladen …</p>
+            <p id="dataStatus" class="data-status">Supabase-Verbindung wird vorbereitet.</p>
             <button id="clearFilters" class="btn btn-secondary">Filter zurücksetzen</button>
           </div>
-          <div id="propertyCards" class="card-grid"></div>
-          <div id="propertyDetail" class="property-detail">
-            <h3>Immobiliendetails</h3>
-            <p>Wählen Sie ein Angebot aus, um alle Details anzuzeigen.</p>
+          <div id="propertyCards" class="property-list"></div>
+        </div>
+      </section>
+
+
+      <section id="datenstandard" class="section section-light standard-section">
+        <div class="container standard-card">
+          <div>
+            <span class="subtitle">Datenstandard</span>
+            <h2>Dynamische Immobilien aus Supabase</h2>
+            <p>Auf der Startseite sind alle Immobilien als Listenansicht sichtbar. Ein Klick auf eine Zeile öffnet die eigene Detailseite unter /DE/Immobiliendetailseite/. Mehrsprachige Felder können pro Sprache aus Supabase gelesen und vor der Anzeige transformiert werden.</p>
           </div>
+          <a class="btn btn-secondary" href="#angebote">Immobilien anzeigen</a>
         </div>
       </section>
 
@@ -177,6 +186,7 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="config.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

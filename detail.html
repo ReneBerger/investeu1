@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Immobiliendetailseite | immo17.at</title>
+    <meta name="description" content="Detailseite einer Immobilie mit dynamischen Daten aus Supabase" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="main-header fixed-header">
+      <div class="header-lower">
+        <div class="header-inner container">
+          <a class="logo" href="/DE/">immo17</a>
+          <nav class="main-menu">
+            <a href="/DE/">Startseite</a>
+            <a href="/DE/#angebote">Immobilien</a>
+            <a href="/DE/#karte">Karte</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section-dark detail-page-section">
+        <div class="container">
+          <a id="backToList" class="btn btn-secondary" href="/DE/">Zurück zur Listenansicht</a>
+          <p id="detailStatus" class="data-status">Detailseite wird geladen …</p>
+          <div id="detailRoot"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/config.js"></script>
+    <script type="module" src="/detail.js"></script>
+  </body>
+</html>
